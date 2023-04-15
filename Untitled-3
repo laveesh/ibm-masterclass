@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int count(string slab){
+    int count=0;
+    for(auto x: slab){
+        if(x!==' ')
+        count++;
+    }
+    return count;
+}
+
+int main(){
+    string slab;
+    cin>>slab;
+    int noOfSlab = count(slab);
+
+    
+
+    int slabArr[noOfSlab];
+    int i=0
+    for(auto x: slab){
+        if(x!==' '){
+            slabArr[i]=(int)x;
+            i++;
+        }
+    }
+    int tax[noOfSlab];
+    for(int i=0; i<noOfSlab;i++){
+        cin>>tax[i];
+    }
+
+    int rebate;
+    cin>>rebate;
+
+    string empsal;
+    cin>>empsal;
+
+    int noOfEmp = count(empsal);
+    int empArr[noOfSlab];
+    int j=0
+    for(auto x: empsal){
+        if(x!==' '){
+            slabArr[j]=(int)x;
+            j++;
+        }
+    }
+
+    for(int)
+
+    return 0;
+}

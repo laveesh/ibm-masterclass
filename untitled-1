@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int comp (const void * a, const void * b)
+{
+   return ( *(int*)a - *(int*)b );
+}
+
+int main()
+{
+    scanf("%d", &C);
+    int i, x[9999], y[9999], v[9999], t[9999], thisCount, totalCollisions;
+    while(c--){
+        scanf("%d", &x[i]);
+        scanf("%d", &y[i]);
+        scanf("%d", &v[i]);
+        t[i] = pow( ( pow(((float) x[i]),2) + pow(((float) y[i]),2) ), 0.5) / ((float) v);
+        i ++;
+    }
+
+// sort time array
+     qsort (t, sizeof(t)/sizeof(*t), sizeof(*t), comp);
+
+    thisCount = 1;
+    for(i=0;i<C;i++){
+        if(t[i + 1]){
+            if(t[i] == t[i + 1]){
+                thisCount ++;
+            }else{
+                if( thisCount > 1 )
+                    totalCollisions = fact(thisCount) / ( fact(2) * fact(thisCount - 2) );
+                thisCount = 1;
+            }
+        }
+    }
+
+    printf("%d", totalCollisions);
+    return 0;
+}
